@@ -1,0 +1,11 @@
+{% extends "shop/base.html" %}
+{% block title %}Create an account{% endblock %}
+   {% block content %}
+     <h1>Create a address</h1>
+     <p>Please,add address:</p>
+     <form action="." method="post">
+       {{ address_form.as_p }}
+       {% csrf_token %}
+       <p><input type="submit" value="Add Address"></p>
+     </form>
+{% endblock %}
